@@ -1,0 +1,91 @@
+Problem Name	A1_Dexmedetomidine.brd	A1_Buprenorphine.brd
+%(ProblemText)%	Thumper the rabbit is scheduled for a minor examination and needs sedation. He weighs 4 lbs 8 oz. The veterinarian plans to use Dexmedetomidine (0.1 mg/mL, available in a 10 mL vial). The correct dosage is 0.05 mg/kg IV. What is the dose in milligrams and milliliters of Dexmedetomidine to be given to Thumper?	A golden retriever named Biscuit has recently undergone surgery and requires post-operative pain management with Buprenorphine. Biscuit weighs 10 lbs 4 oz. The Multi-Dose Vial contains 30 mL and is labeled 9 mg per 30 mL (0.3 mg/mL). The correct dosage is 0.02 mg/kg. How much Buprenorphine should Biscuit receive in milligrams, and how much liquid will you draw up in a syringe?
+%(Animal)%	Thumper	Biscuit
+%(DrugName)%	Dexmedetomidine	Buprenorphine
+%(checkbox1_P1)%	10 mL	30 mL
+%(checkbox2_P1)%	0.1 mg/mL	0.3 mg/mL
+%(checkbox3_P1)%	0.05 mg/kg	0.02 mg/kg
+%(checkbox4_P1)%	4 lbs 8 oz	10 lbs 4 oz
+%(lbs)%	4	10
+%(oz)%	8	4
+%(MedRatio)%	0.05	0.02
+%(FinalRatio)%	0.1	0.3
+%(StartInfoCheck_P1)%	"Pick a number,%(checkbox2_P1)%,%(checkbox3_P1)%,%(checkbox4_P1)%"	"Pick a number,%(checkbox2_P1)%,%(checkbox3_P1)%,%(checkbox4_P1)%"
+%(link_7)%	4 lbs 8 oz	10 lbs 4 oz
+%(ratios1_P1)%	"Pick a ratio,,0.1 mg/ 1 mL,1 mL/ 0.1 mg,,0.05 mg/ 1 kg,1 kg/ 0.05 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"	"Pick a ratio,,0.3 mg/ 1 mL,1 mL/ 0.3 mg,,0.02 mg/ 1 kg,1 kg/ 0.02 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"
+%(ratios2_P1)%	"Pick a ratio,,0.1 mg/ 1 mL,1 mL/ 0.1 mg,,0.05 mg/ 1 kg,1 kg/ 0.05 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"	"Pick a ratio,,0.3 mg/ 1 mL,1 mL/ 0.3 mg,,0.02 mg/ 1 kg,1 kg/ 0.02 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"
+%(ratios3_P1)%	"Pick a ratio,,0.1 mg/ 1 mL,1 mL/ 0.1 mg,,0.05 mg/ 1 kg,1 kg/ 0.05 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"	"Pick a ratio,,0.3 mg/ 1 mL,1 mL/ 0.3 mg,,0.02 mg/ 1 kg,1 kg/ 0.02 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"
+%(ratios4_P1)%	"Pick a ratio,,0.1 mg/ 1 mL,1 mL/ 0.1 mg,,0.05 mg/ 1 kg,1 kg/ 0.05 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"	"Pick a ratio,,0.3 mg/ 1 mL,1 mL/ 0.3 mg,,0.02 mg/ 1 kg,1 kg/ 0.02 mg,,16 oz/ 1 lbs,1 lbs/ 16 oz,,2.2 lbs/ 1 kg,1 kg/ 2.2 lbs,,35.27 oz/ 1 kg,1 kg/ 35.27 oz"
+%(link_12)%	FALSE	FALSE
+%(link_13)%	FALSE	FALSE
+%(link_14)%	FALSE	FALSE
+%(link_15)%	FALSE	FALSE
+%(link_16)%	FALSE	FALSE
+%(link_17)%	FALSE	FALSE
+%(link_18)%	FALSE	FALSE
+%(link_19)%	FALSE	FALSE
+%(link_20)%	FALSE	FALSE
+%(StartInfoCheck_P2)%	FALSE	FALSE
+%(checkbox1_P2)%	FALSE	FALSE
+%(checkbox2_P2)%	FALSE	FALSE
+%(checkbox3_P2)%	FALSE	FALSE
+%(checkbox4_P2)%	FALSE	FALSE
+%(checkBoxGroup_P1)%	10 mL: false;0.1 mg/mL: true;0.05 mg/kg: true;4 lbs 8 oz: true	30 mL: false;0.3 mg/mL: true;0.02 mg/kg: true;10 lbs 4 oz: true
+%(link_23)%	TRUE	TRUE
+%(StartInfoCheck_P3)%	TRUE	TRUE
+%(StartInfoCheck_P4)%	%(checkbox4_P1)%	%(checkbox4_P1)%
+%(link_26)%	TRUE	TRUE
+%(link_27)%	TRUE	TRUE
+%(Unit2A_P1)%	lbs	lbs
+%(Unit2A_P2)%	FALSE	FALSE
+%(ratios1_P2)%	1 lbs/ 16 oz	1 lbs/ 16 oz
+%(Unit2A_P3)%	TRUE	TRUE
+%(Input2A_P1)%	4.5	10.25
+%(link_29)%	TRUE	TRUE
+%(link_30)%	TRUE	TRUE
+%(Answer2A_P1)%	4.50	10.25
+%(Unit2B_P3)%	FALSE	FALSE
+%(ratios2_P2)%	1 kg/ 2.2 lbs	1 kg/ 2.2 lbs
+%(Unit2B_P2)%	kg	kg
+%(Unit2B_P1)%	TRUE	TRUE
+%(Input2B_P1)%	2.0454	4.6590
+%(link_33)%	TRUE	TRUE
+%(link_34)%	TRUE	TRUE
+%(Unit2C_P2)%	FALSE	FALSE
+%(Answer2B)%	2.05	4.66
+%(Unit2C_P1)%	mg	mg
+%(ratios3_P2)%	0.05 mg/ 1 kg	0.02 mg/ 1 kg
+%(Unit2C_P3)%	TRUE	TRUE
+%(Input2C_P1)%	0.10	0.09
+%(Unit2D_P2)%	TRUE	TRUE
+%(Unit2D_P3)%	mL	mL
+%(link_37)%	TRUE	TRUE
+%(link_38)%	TRUE	TRUE
+%(Answer2C)%	0.10	0.09
+%(ratios4_P2)%	1 mL/ 0.1 mg	1 mL/ 0.3 mg
+%(Unit2D_P1)%	TRUE	TRUE
+%(Input2D_P1)%	1.00	0.30
+%(done)%	-1	-1
+%(Input2D_P2)%	0	0
+%(ratios4_P3)%	16 oz/ 1 lbs	16 oz/ 1 lbs
+%(Input2C_P2)%	0	0
+%(ratios3_P3)%	1 mL/ 0.1 mg	1 mL/ 0.3 mg
+%(Input2B_P2)%	0	0
+%(ratios2_P3)%	1 kg/ 0.05 mg	1 kg/ 0.02 mg
+%(Input2A_P2)%	0	0
+%(ratios1_P3)%	0.1 mg/ 1 mL	0.3 mg/ 1 mL
+%(ratios1_P4)%	16 oz/ 1 lbs	16 oz/ 1 lbs
+%(Unit2A_P4)%	TRUE	TRUE
+%(Unit2A_P5)%	oz	oz
+%(Answer2AUnits)%	oz	oz
+%(Input2A_P3)%	72	164
+%(link_83)%	TRUE	TRUE
+%(link_84)%	TRUE	TRUE
+%(Answer2A_P2)%	4.50	%(Answer2A_P1)%
+%(Unit2B_P4)%	FALSE	FALSE
+%(ratios2_P4)%	1 kg/ 35.27 oz	1 kg/ 35.27 oz
+%(ratios2_P5)%	0.1 mg/ 1 mL	%(ratios1_P3)%
+%(Input2A_P4)%	05432	05432
+%(StartInfoCheck_P5)%	0.1 mg/mL	%(checkbox2_P1)%
+%(checkBoxGroup_P2)%	10 mL: false;0.1 mg/mL: false;0.05 mg/kg: true;4 lbs 8 oz: false	30 mL: false;0.3 mg/mL: false;0.02 mg/kg: true;10 lbs 4 oz: false
+Path 1	1 

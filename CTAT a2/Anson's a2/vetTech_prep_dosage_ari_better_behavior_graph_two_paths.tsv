@@ -1,0 +1,23 @@
+Problem Name	better_behavior_graph.brd
+%(startStateNodeName)%	
+%(problem_image)%	
+%(problem_statement)%	
+%(weight_mixed)%	
+%(dosage)%	
+%(concentration)%	
+%(radios_P1)%	radio1: oz
+%(chosenToKgFormula_P1)%	weight/35.274
+%(qty2_P1)%	26
+%(qty3_P1)%	26/35.274
+%(doseMassFormula_P1)%	dose = dosage * weight
+%(qty6_P1)%	22 * 0.737
+%(doseVolumeFormula_P1)%	dose (mL) = dose (mg)/concentration of product (mg/mL)
+%(qty7_P1)%	16.214/100
+%(radios_P2)%	radio2: lbs
+%(chosenToKgFormula_P3)%	weight/2.205
+%(qty2_P3)%	1.625
+%(qty3_P2)%	1.625/2.205
+%(doseMassFormula_P2)%	dose = dosage * weight
+%(qty6_P2)%	22 * 0.737
+%(doseVolumeFormula_P2)%	dose (mL) = dose (mg)/concentration of product (mg/mL)
+%(qty7_P2)%	16.214/100

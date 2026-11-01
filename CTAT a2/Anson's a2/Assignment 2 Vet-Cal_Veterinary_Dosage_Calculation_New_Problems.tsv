@@ -1,0 +1,132 @@
+Problem Name	Problem3.brd	Problem4.brd
+Path 3	24 -> 25 -> 26 -> 27 -> 28 -> 29 -> 30 -> 31	24 -> 25 -> 26 -> 27 -> 28 -> 29 -> 30 -> 31
+Path 2	40 -> 41 -> 42 -> 43 -> 44 -> 45	40 -> 41 -> 42 -> 43 -> 44 -> 45
+Path 1	1 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 -> 16 -> 17 -> 18 -> 19 -> 20 -> 21 -> 22 -> 23 -> 32 -> 33 -> 34 -> 35 -> 36 -> 37 -> 38 -> 39 -> 46 -> 47 -> 48 -> 49 -> 50 -> 51 -> 52 -> 53 -> 54	1 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 -> 16 -> 17 -> 18 -> 19 -> 20 -> 21 -> 22 -> 23 -> 32 -> 33 -> 34 -> 35 -> 36 -> 37 -> 38 -> 39 -> 46 -> 47 -> 48 -> 49 -> 50 -> 51 -> 52 -> 53 -> 54
+%(woz_hint_1)%	"Please enter ""%(woz)%"" in the highlighted field."	"Please enter ""%(woz)%"" in the highlighted field."
+%(woz)%	8	8
+%(wlb_hint_1)%	"Please enter ""%(wlb)%"" in the highlighted field."	"Please enter ""%(wlb)%"" in the highlighted field."
+%(wlb)%	3	5
+%(w3_P2_hint_2)%	"Please enter ""%(w3_P2)%"" in the highlighted field."	"Please enter ""%(w3_P2)%"" in the highlighted field."
+%(w3_P2_hint_1)%	Use the total weight you calculated in Step 1.	Use the total weight you calculated in Step 1.
+%(w3_P2)%	56	88
+%(w3_P1_hint_2)%	"Please enter ""%(w3_P1)%"" in the highlighted field."	"Please enter ""%(w3_P1)%"" in the highlighted field."
+%(w3_P1_hint_1)%	Use the total weight you calculated in Step 1.	Use the total weight you calculated in Step 1.
+%(w3_P1)%	3.50	5.50
+%(w2_P2_hint_2)%	"Please enter ""%(w2_P2)%"" in the highlighted field."	"Please enter ""%(w2_P2)%"" in the highlighted field."
+%(w2_P2_hint_1)%	Add the weight you are trying to convert	Add the weight you are trying to convert
+%(w2_P2)%	3	5
+%(w2_P1_hint_2)%	"Please enter ""%(w2_P1)%"" in the highlighted field."	"Please enter ""%(w2_P1)%"" in the highlighted field."
+%(w2_P1_hint_1)%	Add the weight you are trying to convert	Add the weight you are trying to convert
+%(w2_P1)%	8	8
+%(w1_P2_hint_2)%	Please enter <%=wlb%> or <%=woz%> in the highlighted field.	Please enter <%=wlb%> or <%=woz%> in the highlighted field.
+%(w1_P2_hint_1)%	Here you can convert the entire weight into pounds or ounces. If you want to convert to pounds then enter the part of the weight that is already in pounds or vice versa	Here you can convert the entire weight into pounds or ounces. If you want to convert to pounds then enter the part of the weight that is already in pounds or vice versa
+%(w1_P2)%	8	8
+%(w1_P1_hint_2)%	Please enter <%=wlb%> or <%=woz%> in the highlighted field.	Please enter <%=wlb%> or <%=woz%> in the highlighted field.
+%(w1_P1_hint_1)%	Here you can convert the entire weight into pounds or ounces. If you want to convert to pounds then enter the part of the weight that is already in pounds or vice versa	Here you can convert the entire weight into pounds or ounces. If you want to convert to pounds then enter the part of the weight that is already in pounds or vice versa
+%(w1_P1)%	3	5
+%(vc2_hint_2)%	"Please enter ""%(vc2)%"" in the highlighted field."	"Please enter ""%(vc2)%"" in the highlighted field."
+%(vc2_hint_1)%	Which quantity tells you how many milligrams are contained in each milliliter?	Which quantity tells you how many milligrams are contained in each milliliter?
+%(vc2)%	25	20
+%(vc1_hint_2)%	"Please enter ""%(vc1)%"" in the highlighted field."	"Please enter ""%(vc1)%"" in the highlighted field."
+%(vc1_hint_1)%	Substitute the values into the formula	Substitute the values into the formula
+%(vc1)%	2.39	7.50
+%(Problem_statement_hint_1)%	Please click the highlighted button.	Please click the highlighted button.
+%(Problem_statement)%	A rabbit named Clover weighs 3 pounds 8 ounces and needs a fictional medication called Vetrelief. The prescribed dosage is 1.5mg per kg of body weight. The bottle contains 50mg in 2mL (25mg/mL) (see the photograph). How many milligrams of Vetrelief should Clover receive? How many milliliters of the liquid should be administered?	A small dog named Pepper weighs 5 pounds 8 ounces and needs a fictional medication called Canimed. The prescribed dosage is 3mg per kg of body weight. The bottle contains 100mg in 5mL (20mg/mL) (see the photograph). How many milligrams of Canimed should Pepper receive? How many milliliters of the liquid should be drawn up?
+%(iwdsde_P2_hint_2)%	"Please select "" %(iwdsde_P2)%"" from the highlighted menu."	"Please select "" %(iwdsde_P2)%"" from the highlighted menu."
+%(iwdsde_P2_hint_1)%	The denominator should use the unit you are converting from.	The denominator should use the unit you are converting from.
+%(iwdsde_P2)%	1 lb	1 lb
+%(iwdsde_P1_hint_2)%	"Please select "" %(iwdsde_P1)%"" from the highlighted menu."	"Please select "" %(iwdsde_P1)%"" from the highlighted menu."
+%(iwdsde_P1_hint_1)%	The denominator should use the unit you are converting from.	The denominator should use the unit you are converting from.
+%(iwdsde_P1)%	16 oz	16 oz
+%(Img_hint_1)%	"Please answer ""No_Input"" on the highlighted element."	"Please answer ""No_Input"" on the highlighted element."
+%(Img)%	Assets/Img3.png	Assets/Img4.png
+%(f4_hint_2)%	"Please select "" %(f4)%"" from the highlighted menu."	"Please select "" %(f4)%"" from the highlighted menu."
+%(f4_hint_1)%	Which quantity tells you how many milligrams are contained in each milliliter?	Which quantity tells you how many milligrams are contained in each milliliter?
+%(f4)%	concentration	concentration
+%(f3_hint_2)%	"Please select "" %(f3)%"" from the highlighted menu."	"Please select "" %(f3)%"" from the highlighted menu."
+%(f3_hint_1)%	Which quantity tells you how many milligrams the animal needs?	Which quantity tells you how many milligrams the animal needs?
+%(f3)%	dose	dose
+%(f2_P2_hint_1)%	"Please select "" %(f2_P2)%"" from the highlighted menu."	"Please select "" %(f2_P2)%"" from the highlighted menu."
+%(f2_P2)%	weight	weight
+%(f2_P1_hint_1)%	"Please select "" %(f2_P1)%"" from the highlighted menu."	"Please select "" %(f2_P1)%"" from the highlighted menu."
+%(f2_P1)%	dosage	dosage
+%(f1_P2_hint_2)%	"Please select "" %(f1_P2)%"" from the highlighted menu."	"Please select "" %(f1_P2)%"" from the highlighted menu."
+%(f1_P2_hint_1)%	Which quantity tells you how much medication is needed per kilogram?	Which quantity tells you how much medication is needed per kilogram?
+%(f1_P2)%	dosage	dosage
+%(f1_P1_hint_2)%	"Please select "" %(f1_P1)%"" from the highlighted menu."	"Please select "" %(f1_P1)%"" from the highlighted menu."
+%(f1_P1_hint_1)%	Which quantity tells you how heavy the animal is?	Which quantity tells you how heavy the animal is?
+%(f1_P1)%	weight	weight
+%(dosage_hint_2)%	The prescribed dosage is %(dosage)% mg/kg.	The prescribed dosage is %(dosage)% mg/kg.
+%(dosage_hint_1)%	The dosage tells you how much medication should be given relative to the animal's weight. Look for a value written with units of milligrams per kilogram (mg/kg).	The dosage tells you how much medication should be given relative to the animal's weight. Look for a value written with units of milligrams per kilogram (mg/kg).
+%(dosage)%	1.5	3
+%(done_hint_1)%	Please click the highlighted button.	Please click the highlighted button.
+%(done)%	-1	-1
+%(dc2_P2_hint_3)%	"Please enter ""%(dc2_P2)%"" in the highlighted field."	"Please enter ""%(dc2_P2)%"" in the highlighted field."
+%(dc2_P2_hint_2)%	Use the values you entered: <%=weightKg%> kg × <%=dosage%> mg/kg = <%=fmtDecimal(weightKg*dosage,2)%> mg.	Use the values you entered: <%=weightKg%> kg × <%=dosage%> mg/kg = <%=fmtDecimal(weightKg*dosage,2)%> mg.
+%(dc2_P2_hint_1)%	Substitute the values into the formula you selected in the last step	Substitute the values into the formula you selected in the last step
+%(dc2_P2)%	1.59	2.50
+%(dc2_P1_hint_3)%	"Please enter ""%(dc2_P1)%"" in the highlighted field."	"Please enter ""%(dc2_P1)%"" in the highlighted field."
+%(dc2_P1_hint_2)%	Use the values you entered: <%=weightKg%> kg × <%=dosage%> mg/kg = <%=fmtDecimal(weightKg*dosage,2)%> mg.	Use the values you entered: <%=weightKg%> kg × <%=dosage%> mg/kg = <%=fmtDecimal(weightKg*dosage,2)%> mg.
+%(dc2_P1_hint_1)%	Substitute the values into the formula you selected in the last step	Substitute the values into the formula you selected in the last step
+%(dc2_P1)%	1.5	3
+%(dc1_P2_hint_2)%	"Please enter ""%(dc1_P2)%"" in the highlighted field."	"Please enter ""%(dc1_P2)%"" in the highlighted field."
+%(dc1_P2_hint_1)%	Substitute the values into the formula you selected in the last step	Substitute the values into the formula you selected in the last step
+%(dc1_P2)%	1.5	3
+%(dc1_P1_hint_2)%	"Please enter ""%(dc1_P1)%"" in the highlighted field."	"Please enter ""%(dc1_P1)%"" in the highlighted field."
+%(dc1_P1_hint_1)%	Substitute the values into the formula you selected in the last step	Substitute the values into the formula you selected in the last step
+%(dc1_P1)%	1.59	2.50
+%(concentration_hint_2)%	"Please enter ""%(concentration)%"" in the highlighted field."	"Please enter ""%(concentration)%"" in the highlighted field."
+%(concentration_hint_1)%	Use the concentration shown on the medication product or figure.	Use the concentration shown on the medication product or figure.
+%(concentration)%	25	20
+%(combo9_hint_1)%	"Please select "" %(combo9)%"" from the highlighted menu."	"Please select "" %(combo9)%"" from the highlighted menu."
+%(combo9)%	kg	kg
+%(combo8_P2_hint_2)%	"Please select "" %(combo8_P2)%"" from the highlighted menu."	"Please select "" %(combo8_P2)%"" from the highlighted menu."
+%(combo8_P2_hint_1)%	Choose the factor that cancels ounces and leaves kilograms.	Choose the factor that cancels ounces and leaves kilograms.
+%(combo8_P2)%	35.27 oz	35.27 oz
+%(combo8_P1_hint_2)%	"Please select "" %(combo8_P1)%"" from the highlighted menu."	"Please select "" %(combo8_P1)%"" from the highlighted menu."
+%(combo8_P1_hint_1)%	Choose the factor that cancels pounds and leaves kilograms.	Choose the factor that cancels pounds and leaves kilograms.
+%(combo8_P1)%	2.2 lb	2.2 lb
+%(combo7_P2_hint_1)%	"Please select "" %(combo7_P2)%"" from the highlighted menu."	"Please select "" %(combo7_P2)%"" from the highlighted menu."
+%(combo7_P2)%	oz	oz
+%(combo7_P1_hint_1)%	"Please select "" %(combo7_P1)%"" from the highlighted menu."	"Please select "" %(combo7_P1)%"" from the highlighted menu."
+%(combo7_P1)%	lb	lb
+%(combo5_P2_hint_2)%	"Please select "" %(combo5_P2)%"" from the highlighted menu."	"Please select "" %(combo5_P2)%"" from the highlighted menu."
+%(combo5_P2_hint_1)%	Choose a conversion factor that will cancel pounds.	Choose a conversion factor that will cancel pounds.
+%(combo5_P2)%	16 oz	16 oz
+%(combo5_P1_hint_2)%	"Please select "" %(combo5_P1)%"" from the highlighted menu."	"Please select "" %(combo5_P1)%"" from the highlighted menu."
+%(combo5_P1_hint_1)%	Choose a conversion factor that will cancel ounces.	Choose a conversion factor that will cancel ounces.
+%(combo5_P1)%	1 lb	1 lb
+%(combo4_hint_1)%	"Please select "" %(combo4)%"" from the highlighted menu."	"Please select "" %(combo4)%"" from the highlighted menu."
+%(combo4)%	mg/mL	mg/mL
+%(combo3_hint_1)%	"Please select "" %(combo3)%"" from the highlighted menu."	"Please select "" %(combo3)%"" from the highlighted menu."
+%(combo3)%	oz	oz
+%(combo2_hint_1)%	"Please select "" %(combo2)%"" from the highlighted menu."	"Please select "" %(combo2)%"" from the highlighted menu."
+%(combo2)%	lb	lb
+%(combo1_hint_1)%	"Please select "" %(combo1)%"" from the highlighted menu."	"Please select "" %(combo1)%"" from the highlighted menu."
+%(combo15_hint_1)%	"Please select "" %(combo15)%"" from the highlighted menu."	"Please select "" %(combo15)%"" from the highlighted menu."
+%(combo15)%	mL	mL
+%(combo14_hint_1)%	"Please select "" %(combo14)%"" from the highlighted menu."	"Please select "" %(combo14)%"" from the highlighted menu."
+%(combo14)%	mg/mL	mg/mL
+%(combo13_hint_1)%	"Please select "" %(combo13)% "" from the highlighted menu."	"Please select "" %(combo13)% "" from the highlighted menu."
+%(combo13)%	mg	mg
+%(combo12_hint_1)%	"Please select "" %(combo12)% "" from the highlighted menu."	"Please select "" %(combo12)% "" from the highlighted menu."
+%(combo12)%	mg	mg
+%(combo11_P2_hint_1)%	"Please select "" %(combo11_P2)%"" from the highlighted menu."	"Please select "" %(combo11_P2)%"" from the highlighted menu."
+%(combo11_P2)%	kg	kg
+%(combo11_P1_hint_1)%	"Please select "" %(combo11_P1)%"" from the highlighted menu."	"Please select "" %(combo11_P1)%"" from the highlighted menu."
+%(combo11_P1)%	mg/kg	mg/kg
+%(combo10_P2_hint_1)%	"Please select "" %(combo10_P2)%"" from the highlighted menu."	"Please select "" %(combo10_P2)%"" from the highlighted menu."
+%(combo10_P2)%	mg/kg	mg/kg
+%(combo10_P1_hint_1)%	"Please select "" %(combo10_P1)%"" from the highlighted menu."	"Please select "" %(combo10_P1)%"" from the highlighted menu."
+%(combo10_P1)%	kg	kg
+%(combo1)%	mg/kg	mg/kg
+%(ans4_hint_1)%	"Please enter ""%(ans4)%"" in the highlighted field."	"Please enter ""%(ans4)%"" in the highlighted field."
+%(ans4)%	0.10	0.38
+%(ans3_hint_1)%	"Please enter ""%(ans3)%"" in the highlighted field."	"Please enter ""%(ans3)%"" in the highlighted field."
+%(ans3)%	2.39	7.50
+%(ans2_hint_1)%	"Please enter ""%(ans2)%"" in the highlighted field."	"Please enter ""%(ans2)%"" in the highlighted field."
+%(ans2)%	w3 / parseFloat(combo8)	w3 / parseFloat(combo8)
+%(ans1_P2_hint_1)%	"Please enter ""%(ans1_P2)%"" in the highlighted field."	"Please enter ""%(ans1_P2)%"" in the highlighted field."
+%(ans1_P2)%	56	88
+%(ans1_P1_hint_1)%	"Please enter ""3.50"" in the highlighted field."	"Please enter ""5.50"" in the highlighted field."
+%(ans1_P1)%	w1+w2/16	w1+w2/16

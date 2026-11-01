@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Veterinary Dose Calculation Tutor</title>
+
+  <!-- CTAT libraries -->
+  <link rel="stylesheet" type="text/css" href="/ctat/CTAT.css">
+  <script src="/ctat/ctat.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background: #f4f6f8;
+      color: #222;
+      height: 100%;
+    }
+
+    #wrapper {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ---------- Left: tutor interface ---------- */
+    #tutorArea {
+      flex: 1 1 auto;
+      padding: 12px 16px;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    /* ---------- Right: hint panel (never scrolls out) ---------- */
+    #hintPanel {
+      flex: 0 0 320px;
+      border-left: 2px solid #c8d0d8;
+      background: #ffffff;
+      padding: 12px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+    }
+
+    h2 {
+      font-size: 15px;
+      margin: 14px 0 6px 0;
+      color: #1a4d80;
+      border-bottom: 1px solid #c8d0d8;
+      padding-bottom: 3px;
+    }
+
+    .problemBox {
+      background: #fffbe6;
+      border: 1px solid #e0c97f;
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      min-height: 48px;
+    }
+
+    table.given {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+
+    table.given td {
+      padding: 3px 6px;
+      vertical-align: middle;
+    }
+
+    table.given td.label {
+      width: 55%;
+      text-align: right;
+      color: #333;
+    }
+
+    table.given td.value {
+      width: 45%;
+    }
+
+    .stepRow {
+      margin: 6px 0;
+      padding: 6px 8px;
+      background: #ffffff;
+      border: 1px solid #d5dde5;
+      border-radius: 4px;
+    }
+
+    .stepRow .stepLabel {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+      color: #1a4d80;
+    }
+
+    .stepRow .stepFormula {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .precisionNote {
+      font-size: 12px;
+      color: #8a6d3b;
+      background: #fcf8e3;
+      border: 1px solid #faebcc;
+      border-radius: 3px;
+      padding: 4px 6px;
+      margin-top: 6px;
+    }
+
+    .units {
+      font-size: 12px;
+      color: #555;
+      margin-left: 4px;
+    }
+
+    input.ctatTextInput {
+      width: 110px;
+    }
+  </style>
+</head>
+
+<body>
+<div id="wrapper">
+
+  <!-- ================= TUTOR INTERFACE ================= -->
+  <div id="tutorArea">
+
+    <h1>Veterinary Dose Calculation</h1>
+
+    <!-- ---------- Problem statement (filled by Start State) ---------- -->
+    <div class="problemBox">
+      <b>Problem:</b>
+      <span id="problemStatement" class="ctatTextArea"
+            cols="60" rows="3"></span>
+    </div>
+
+    <!-- ---------- Given information (filled by Start State) ---------- -->
+    <h2>Given Information</h2>
+    <table class="given">
+      <tr>
+        <td class="label">Patient weight:</td>
+        <td class="value">
+          <span id="patientWeight" class="ctatTextField"></span>
+          <span id="weightUnit" class="ctatTextField units"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Prescribed dose rate:</td>
+        <td class="value">
+          <span id="doseRate" class="ctatTextField"></span>
+          <span id="doseRateUnit" class="ctatTextField units"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Drug concentration:</td>
+        <td class="value">
+          <span id="drugConcentration" class="ctatTextField"></span>
+          <span id="concentrationUnit" class="ctatTextField units"></span>
+        </td>
+      </tr>
+    </table>
+
+    <!-- ---------- Step 1: unit conversion ---------- -->
+    <h2>Step 1 &mdash; Convert weight to kilograms</h2>
+    <div class="stepRow">
+      <span class="stepLabel">
+        Convert the patient's weight to kilograms (kg).
+      </span>
+      <span class="stepFormula">
+        Hint: 1 kg = 2.2 lb
+      </span>
+      <input type="text" id="convertedWeight" class="ctatTextInput" />
+      <span class="units">kg</span>
+    </div>
+
+    <!-- ---------- Step 2: total dose ---------- -->
+    <h2>Step 2 &mdash; Calculate the total dose</h2>
+    <div class="stepRow">
+      <span class="stepLabel">
+        Multiply the weight in kg by the prescribed dose rate.
+      </span>
+      <span class="stepFormula">
+        total dose = weight (kg) &times; dose rate (mg/kg)
+      </span>
+      <input type="text" id="totalDose" class="ctatTextInput" />
+      <span class="units">mg</span>
+    </div>
+
+    <!-- ---------- Step 3: volume to draw ---------- -->
+    <h2>Step 3 &mdash; Calculate the volume to administer</h2>
+    <div class="stepRow">
+      <span class="stepLabel">
+        Divide the total dose by the drug concentration.
+      </span>
+      <span class="stepFormula">
+        volume (mL) = total dose (mg) &divide; concentration (mg/mL)
+      </span>
+      <input type="text" id="finalVolume" class="ctatTextInput" />
+      <span class="units">mL</span>
+    </div>
+
+    <!-- ---------- Round-off instruction ---------- -->
+    <div class="precisionNote">
+      <b>Precision:</b> Enter all values rounded to <b>2 decimal places</b>
+      (e.g., 5.45, not 5.4545). Intermediate values must be rounded to
+      2 decimals before being used in the next step.
+    </div>
+
+    <!-- ---------- Done button ---------- -->
+    <div style="margin-top:12px;">
+      <input type="button" id="doneButton" class="ctatButton"
+             value="Done" />
+    </div>
+
+  </div>
+
+  <!-- ================= HINT PANEL ================= -->
+  <div id="hintPanel">
+    <h2 style="margin-top:0;">Hints</h2>
+    <div id="hintArea"></div>
+    <div id="hintControls" style="margin-top:10px;">
+      <input type="button" id="hintButton" class="ctatHintButton"
+             value="Show Hint" />
+    </div>
+  </div>
+
+</div>
+
+<!-- ================= CTAT INITIALIZATION ================= -->
+<script>
+  /*
+   * CTAT initialization.
+   * - tutorType "ExampleTracing" -> example-tracing tutor
+   * - The behavior graph is loaded from doseTutor.brd (same folder).
+   * - All problem-specific text/values are supplied by the Start State
+   *   inside the behavior graph, NOT hardcoded here.
+   */
+  CTAT.Tutor.init({
+    tutorType: "ExampleTracing",
+    interface: "doseTutor.html",
+    behaviorGraph: "doseTutor.brd",
+    hintPanel: "hintPanel",
+    hintArea: "hintArea",
+    hintButton: "hintButton"
+  });
+</script>
+
+</body>
+</html>

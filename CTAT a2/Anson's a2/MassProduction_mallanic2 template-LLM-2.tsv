@@ -1,0 +1,102 @@
+%(label)%	Problem A	Problem B
+%(i8d233)%	<strong>Calculate the Correct Telazol® Dose</strong>	<strong>Calculate the Correct Telazol® Dose</strong>
+%(i1cjnp)%	<p dir=auto"" data-pm-slice=""1 1 []"">The veterinarian wants to use Telazol® (tiletamine and zolazepam) to restrain a raccoon for a short diagnostic procedure. The dosage is <strong>22 mg/kg IM</strong>. This raccoon weighs <strong>2 lb 4 oz</strong>. What is the dose in milligrams and milliliters of the product shown in the figure to be used on this raccoon?</p><p dir=""auto"">Round all calculated values to 3 decimal places. If you enter the units first, the result will be calculated automatically.</p>	<p dir=auto"" data-pm-slice=""1 1 []"">The veterinarian wants to use Telazol® (tiletamine and zolazepam) to restrain a rabbit for a short diagnostic procedure. The dosage is <strong>22 mg/kg IM</strong>. This rabbit weighs <strong>3 lb 8 oz</strong>. What is the dose in milligrams and milliliters of the product shown in the figure to be used on this rabbit?</p><p dir=""auto"">Round all calculated values to 3 decimal places. If you enter the units first, the result will be calculated automatically.</p>
+%(imageBox)%	Assets/telazol.png	Assets/telazol.png
+%(u1_P2)%	lb	lb
+%(b1_P2)%	2	3
+%(c1_P2)%	16	16
+%(u2_P2)%	oz	oz
+%(t1_P2)%	32	48
+%(u3_P2)%	oz	oz
+%(b2_P2)%	36	56
+%(c2_P2)%	0.028	0.028
+%(u4_P2)%	kg	kg
+%(t2_P2)%	1.008	1.568
+%(u5_P2)%	kg	kg
+%(b3_P2)%	1.008	1.568
+%(c3_P2)%	22	22
+%(u6_P2)%	mg	mg
+%(t3_P2)%	22.176	34.496
+%(u7_P2)%	mg	mg
+%(b4_P2)%	22.176	34.496
+%(c4_P2)%	0.01	0.01
+%(u8_P2)%	mL	mL
+%(t4_P2)%	0.222	0.345
+%(done_P2)%	-1	-1
+%(u1_P1)%	oz	oz
+%(b1_P1)%	4	8
+%(c1_P1)%	0.063	0.063
+%(u2_P1)%	lb	lb
+%(t1_P1)%	0.252	0.504
+%(u3_P1)%	lb	lb
+%(b2_P1)%	2.252	3.504
+%(c2_P1)%	0.454	0.454
+%(u4_P1)%	kg	kg
+%(t2_P1)%	1.022	1.591
+%(u5_P1)%	kg	kg
+%(b3_P1)%	1.022	1.591
+%(c3_P1)%	22	22
+%(u6_P1)%	mg	mg
+%(t3_P1)%	22.484	35.002
+%(u7_P1)%	mg	mg
+%(b4_P1)%	22.484	35.002
+%(c4_P1)%	0.010	0.010
+%(u8_P1)%	mL	mL
+%(t4_P1)%	0.225	0.350
+%(done_P1)%	-1	-1
+Path 1	1 -> 7 -> 3 -> 29 -> 30 -> 31 -> 32 -> 33 -> 34 -> 35 -> 36 -> 37 -> 38 -> 39 -> 40 -> 41 -> 42 -> 43 -> 44 -> 45 -> 46 -> 47 -> 48 -> 49	1 -> 7 -> 3 -> 29 -> 30 -> 31 -> 32 -> 33 -> 34 -> 35 -> 36 -> 37 -> 38 -> 39 -> 40 -> 41 -> 42 -> 43 -> 44 -> 45 -> 46 -> 47 -> 48 -> 49
+%(i8d233_hint_1)%	Please enter "%(i8d233)%" in the highlighted field.	Please enter "%(i8d233)%" in the highlighted field.
+%(i1cjnp_hint_1)%	Please enter "%(i1cjnp)%" in the highlighted field.	Please enter "%(i1cjnp)%" in the highlighted field.
+%(imageBox_hint_1)%	Please enter "<span aria-hidden="true" class="PDq2pG_selectionAnchor"></span>" in the highlighted field.	Please enter "<span aria-hidden="true" class="PDq2pG_selectionAnchor"></span>" in the highlighted field.
+%(u1_P2_hint_1)%	Select the unit attached to the weight portion you are converting.	Select the unit attached to the weight portion you are converting.
+%(u1_P2_hint_2)%	Which unit is used for the 2.000 portion of the animal's weight?	Which unit is used for the 3.000 portion of the animal's weight?
+%(u1_P2_hint_3)%	Select %(u1_P2)%.	Select %(u1_P2)%.
+%(b1_P2_hint_1)%	Look at the numerical value attached to the lb portion of the animal's weight.	Look at the numerical value attached to the lb portion of the animal's weight.
+%(b1_P2_hint_2)%	What number appears before lb in the animal's weight?	What number appears before lb in the animal's weight?
+%(b1_P2_hint_3)%	The animal weighs %(b1_P2)% lb 4 oz. Enter %(b1_P2)%.000.	The animal weighs %(b1_P2)% lb 8 oz. Enter %(b1_P2)%.000.
+%(c1_P2_hint_1)%	Use the conversion factor that changes pounds (lb) into ounces (oz).	Use the conversion factor that changes pounds (lb) into ounces (oz).
+%(c1_P2_hint_2)%	How many ounces are equal to 1 pound?	How many ounces are equal to 1 pound?
+%(c1_P2_hint_3)%	1 lb = %(c1_P2)% oz, so enter %(c1_P2)%.000.	1 lb = %(c1_P2)% oz, so enter %(c1_P2)%.000.
+%(u2_P2_hint_1)%	Select the unit you converted the weight portion into.	Select the unit you converted the weight portion into.
+%(u2_P2_hint_2)%	After converting from lb, which unit should remain?	After converting from lb, which unit should remain?
+%(u2_P2_hint_3)%	Select %(u2_P2)%.	Select %(u2_P2)%.
+%(t1_P2_hint_1)%	Please enter "%(t1_P2)%" in the highlighted field.	Please enter "%(t1_P2)%" in the highlighted field.
+%(u3_P2_hint_1)%	Select the unit of the animal's total weight from Step 1 = <%=u2%>.	Select the unit of the animal's total weight from Step 1 = <%=u2%>.
+%(u3_P2_hint_2)%	What unit was used after the two weight portions were combined?	What unit was used after the two weight portions were combined?
+%(u3_P2_hint_3)%	Select %(u3_P2)%.	Select %(u3_P2)%.
+%(b2_P2_hint_1)%	Use the animal's total weight calculated in Step 1.	Use the animal's total weight calculated in Step 1.
+%(b2_P2_hint_2)%	What was the animal's combined weight after converting both portions to ounces?	What was the animal's combined weight after converting both portions to ounces?
+%(b2_P2_hint_3)%	Use the Step 1 result: %(b2_P2)%.	Use the Step 1 result: %(b2_P2)%.
+%(c2_P2_hint_1)%	Use the conversion factor that changes ounces (oz) into kilograms (kg).	Use the conversion factor that changes ounces (oz) into kilograms (kg).
+%(c2_P2_hint_2)%	How many kilograms are equal to 1 ounce?	How many kilograms are equal to 1 ounce?
+%(c2_P2_hint_3)%	Convert 1 oz to kg and round the conversion factor to 3 decimal places: %(c2_P2)%.	Convert 1 oz to kg and round the conversion factor to 3 decimal places: %(c2_P2)%.
+%(u4_P2_hint_1)%	Select the unit used in the prescribed dosage.	Select the unit used in the prescribed dosage.
+%(u4_P2_hint_2)%	The prescribed dosage is given per kilogram, so what unit should the converted weight use?	The prescribed dosage is given per kilogram, so what unit should the converted weight use?
+%(u4_P2_hint_3)%	Select %(u4_P2)%.	Select %(u4_P2)%.
+%(t2_P2_hint_1)%	Multiply the animal's total weight by the oz-to-kg conversion factor.	Multiply the animal's total weight by the oz-to-kg conversion factor.
+%(t2_P2_hint_2)%	Calculate 36.000 × 0.028 and round to 3 decimal places.	Calculate 56.000 × 0.028 and round to 3 decimal places.
+%(t2_P2_hint_3)%	36.000 × 0.028 = %(t2_P2)%.	56.000 × 0.028 = %(t2_P2)%.
+%(u5_P2_hint_1)%	Select the unit of the animal's converted weight from Step 2.	Select the unit of the animal's converted weight from Step 2.
+%(u5_P2_hint_2)%	The prescribed dosage is given per kilogram, so which weight unit should be used?	The prescribed dosage is given per kilogram, so which weight unit should be used?
+%(u5_P2_hint_3)%	Select %(u5_P2)%.	Select %(u5_P2)%.
+%(b3_P2_hint_1)%	Please enter "%(b3_P2)%" in the highlighted field.	Please enter "%(b3_P2)%" in the highlighted field.
+%(c3_P2_hint_1)%	Look at the dosage given in the problem statement.	Look at the dosage given in the problem statement.
+%(c3_P2_hint_2)%	What numerical dose is prescribed for each kilogram of body weight?	What numerical dose is prescribed for each kilogram of body weight?
+%(c3_P2_hint_3)%	The prescribed dosage is %(c3_P2)% mg/kg. Enter %(c3_P2)%.	The prescribed dosage is %(c3_P2)% mg/kg. Enter %(c3_P2)%.
+%(u6_P2_hint_1)%	Select the unit produced after multiplying kg by %(u6_P2)%/kg.	Select the unit produced after multiplying kg by %(u6_P2)%/kg.
+%(u6_P2_hint_2)%	The kilograms cancel, leaving the unit for the amount of drug.	The kilograms cancel, leaving the unit for the amount of drug.
+%(u6_P2_hint_3)%	Select %(u6_P2)%.	Select %(u6_P2)%.
+%(t3_P2_hint_1)%	Please enter "%(t3_P2)%" in the highlighted field.	Please enter "%(t3_P2)%" in the highlighted field.
+%(u7_P2_hint_1)%	Select the unit of the required drug dose from Step 3.	Select the unit of the required drug dose from Step 3.
+%(u7_P2_hint_2)%	What unit was left after calculating the required drug dose?	What unit was left after calculating the required drug dose?
+%(u7_P2_hint_3)%	Select %(u7_P2)%.	Select %(u7_P2)%.
+%(b4_P2_hint_1)%	Please enter "%(b4_P2)%" in the highlighted field.	Please enter "%(b4_P2)%" in the highlighted field.
+%(c4_P2_hint_1)%	Use the medication concentration to convert milligrams into milliliters.	Use the medication concentration to convert milligrams into milliliters.
+%(c4_P2_hint_2)%	If the medication contains 100 mg in 1 mL, how many mL correspond to 1 mg?	If the medication contains 100 mg in 1 mL, how many mL correspond to 1 mg?
+%(c4_P2_hint_3)%	1 ÷ 100 = %(c4_P2)% mL per mg.	1 ÷ 100 = %(c4_P2)% mL per mg.
+%(u8_P2_hint_1)%	Select the unit used to measure the volume of medication to administer.	Select the unit used to measure the volume of medication to administer.
+%(u8_P2_hint_2)%	After the mg units cancel, which unit remains?	After the mg units cancel, which unit remains?
+%(u8_P2_hint_3)%	Select %(u8_P2)%.	Select %(u8_P2)%.
+%(t4_P2_hint_1)%	Please enter "%(t4_P2)%" in the highlighted field.	Please enter "%(t4_P2)%" in the highlighted field.
+%(done_P2_hint_1)%	Please click the highlighted button.	Please click the highlighted button.
+Path 2	8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 -> 15 

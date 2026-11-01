@@ -1,0 +1,631 @@
+<?xml version="1.0" standalone="yes"?>
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" confirmDone="false" startStateNodeName="%(startStateNodeName)%" tutorType="Example-tracing Tutor">
+    <startNodeMessages>
+        <message><verb>NotePropertySet</verb><properties><MessageType>StartProblem</MessageType><ProblemName>empty</ProblemName></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>problemStatement</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[Skinny Cat is skinny; she only weighs 6 pounds 6 ounces. She has excess stomach acid and needs to be treated with famotidine, the active ingredient in Pepcid AC. The bottle says 200 mg per 20 mL. The correct dosage is 0.5 mg per kg of body weight. How much famotidine (mg) should Skinny Cat receive? How much of the liquid (mL) will you draw up in a syringe?]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>StartStateEnd</MessageType></properties></message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>empty</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>25</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>givenLb</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>145</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>givenOz</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>265</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>givenRate</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>385</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>givenConcentration</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>505</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>wayA_pounds</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>200</x>
+            <y>625</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>wayB_ounces</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>600</x>
+            <y>625</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>weightInKg</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>745</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>totalDoseDone</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>865</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>volumeDone</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>985</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>400</x>
+            <y>1105</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>cd8f715a-08c1-4898-913e-cee7b05d61c4</transaction_id><Selection><value>patientWeight</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[6]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[How many pounds does Skinny Cat weigh, according to the problem?]]></hintMessage>
+            <hintMessage><![CDATA[Find the weight in the problem. Enter only the pounds part (the number before 'lb' or 'pounds').]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[patientWeight]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtNormal(algEval(input))">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && abs(algEval(input) - 6) < 0.001]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>2</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>cb062b3c-7af9-4f5c-8631-6c28edd8e5d5</transaction_id><Selection><value>patientWeightOz</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[6]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[How many extra ounces are given with the weight?]]></hintMessage>
+            <hintMessage><![CDATA[Skinny Cat weighs 6 pounds 6 ounces. The ounces part is the number before 'ounces'.]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[patientWeightOz]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtNormal(algEval(input))">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && abs(algEval(input) - 6) < 0.001]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>28997e22-8e5e-4d69-8365-cd0a6bdb42e1</transaction_id><Selection><value>doseRate</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[0.5]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[What is the prescribed dose rate given in the problem?]]></hintMessage>
+            <hintMessage><![CDATA[Look for the value in mg/kg in the problem statement. Enter only the number.]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[doseRate]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtNormal(algEval(input))">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && abs(algEval(input) - 0.5) < 0.001]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>4</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>7d0815a1-05f4-4635-bbe5-59714ad67f7c</transaction_id><Selection><value>drugConcentration</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[10]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[What is the drug concentration in mg per mL?]]></hintMessage>
+            <hintMessage><![CDATA[The bottle says 200 mg per 20 mL. Type 200/20 and the tutor will calculate the mg per mL.]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[drugConcentration]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtNormal(algEval(input))">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && abs(algEval(input) - 10) < 0.001]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>5e6c21da-317a-45a4-bbcf-9320a715ba14</transaction_id><Selection><value>totalPounds</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[6.38]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[One way to combine the weight: find the total weight in pounds. There are 16 ounces in 1 pound.]]></hintMessage>
+            <hintMessage><![CDATA[Total pounds = pounds + ounces ÷ 16]]></hintMessage>
+            <hintMessage><![CDATA[Type 6 + 6/16 and the tutor will calculate it.]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[totalPounds]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtDecimal(algEval(input) + 0.0000001, 2)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && abs(algEval(input) - (6 + 6 / 16)) <= 0.0051 + 0.005 * abs(6 + 6 / 16)]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>6</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>682eee97-1120-4265-b15a-3e074c7c482e</transaction_id><Selection><value>convertedWeight</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[2.90]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[kg = pounds ÷ 2.2]]></hintMessage>
+            <hintMessage><![CDATA[<%=ifThen(hasValue(totalPounds), "Divide the total pounds by 2.2: type " + totalPounds + "/2.2", "First find the total weight in pounds (Way A) or in ounces (Way B).")%>]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[convertedWeight]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtDecimal(algEval(input) + 0.0000001, 2)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && hasValue(totalPounds) && abs(algEval(input) - (totalPounds / 2.2)) <= 0.0051 + 0.005 * abs(totalPounds / 2.2)]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>d44b0339-bed1-48c7-be52-e5783cfec6cd</transaction_id><Selection><value>totalOunces</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[102.00]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[Another way to combine the weight: find the total weight in ounces. There are 16 ounces in 1 pound.]]></hintMessage>
+            <hintMessage><![CDATA[Total ounces = pounds × 16 + ounces]]></hintMessage>
+            <hintMessage><![CDATA[Type 6*16 + 6 and the tutor will calculate it.]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[totalOunces]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtDecimal(algEval(input) + 0.0000001, 2)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && abs(algEval(input) - (6 * 16 + 6)) <= 0.0051 + 0.005 * abs(6 * 16 + 6)]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>8</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>62bfaaf3-6459-4bed-9c94-9b195ee9586b</transaction_id><Selection><value>convertedWeight</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[2.90]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[kg = ounces ÷ 35.2 (1 kg = 2.2 lb = 35.2 oz)]]></hintMessage>
+            <hintMessage><![CDATA[<%=ifThen(hasValue(totalOunces), "Divide the total ounces by 35.2: type " + totalOunces + "/35.2", "First find the total weight in ounces.")%>]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[convertedWeight]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtDecimal(algEval(input) + 0.0000001, 2)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && hasValue(totalOunces) && abs(algEval(input) - (totalOunces / 35.2)) <= 0.0051 + 0.005 * abs(totalOunces / 35.2)]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>7b35ce8e-8071-4a3f-9146-ac69d512c940</transaction_id><Selection><value>totalDose</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[1.45]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[Total dose (mg) = weight (kg) × dose rate (mg/kg)]]></hintMessage>
+            <hintMessage><![CDATA[<%=ifThen(hasValue(convertedWeight), "Multiply the weight in kg by the dose rate: type " + convertedWeight + "*0.5", "First convert the weight to kilograms in Step 1.")%>]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[totalDose]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtDecimal(algEval(input) + 0.0000001, 2)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && hasValue(convertedWeight) && abs(algEval(input) - (convertedWeight * 0.5)) <= 0.0051 + 0.005 * abs(convertedWeight * 0.5)]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>8</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>10</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>067064d1-6cf0-449f-ab85-04312226f460</transaction_id><Selection><value>finalVolume</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[0.15]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[Volume (mL) = total dose (mg) ÷ concentration (mg/mL)]]></hintMessage>
+            <hintMessage><![CDATA[<%=ifThen(hasValue(totalDose), "Divide the total dose by the concentration: type " + totalDose + "/10", "First calculate the total dose in Step 2.")%>]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[finalVolume]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher replacementFormula="fmtDecimal(algEval(input) + 0.0000001, 2)">
+                        <matcherType>ExpressionMatcher</matcherType>
+                        <matcherParameter name="InputExpression"><![CDATA[hasValue(algEval(input)) && hasValue(totalDose) && abs(algEval(input) - (totalDose / 10)) <= 0.0051 + 0.005 * abs(totalDose / 10)]]></matcherParameter>
+                        <matcherParameter name="relation"><![CDATA[boolean]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>e5dd7bae-856e-4ab6-804f-cf85b50cbba0</transaction_id><Selection><value>done</value></Selection><Action><value>ButtonPressed</value></Action><Input><value><![CDATA[-1]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage><![CDATA[Great work! You completed everything correctly.]]></successMessage>
+            <hintMessage><![CDATA[All the blanks are filled in correctly. Click Done to finish the problem.]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[done]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[ButtonPressed]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>AnyMatcher</matcherType>
+                        <matcherParameter name="single">*</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>10</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <EdgesGroups ordered="false">
+        <group name="Given information" ordered="false" reenterable="true">
+            <link id="1"/>
+            <link id="2"/>
+            <link id="3"/>
+            <link id="4"/>
+        </group>
+        <group name="Calculations" ordered="true" reenterable="true">
+            <link id="9"/>
+            <link id="10"/>
+            <group name="Weight conversion" ordered="true" reenterable="true">
+                <link id="5"/>
+                <link id="6"/>
+                <link id="7"/>
+                <link id="8"/>
+            </group>
+        </group>
+    </EdgesGroups>
+</stateGraph>

@@ -1,0 +1,34 @@
+Problem Name	prob2.brd	prob3.brd
+%(problem_statement)%	Captain the cat is prescribed meloxicam for inflammation following a minor surgery. The veterinarian wants him to receive 2 mg/kg. Captain weighs 34 pounds and 5 1/4 ounces. The pharmacy has a liquid formulation with a concentration of 8 mg/cc. How much of the medication does Captain need in mg, and how many cc should the owner administer each day?	Hazel the rabbit is prescribed buprenorphine for pain management after a dental procedure. The veterinarian prescribes a dose of 0.5 mg/kg. Hazel weighs 19 pounds and 12 1/2 ounces. The available solution has a concentration of 3 mg/cc. How much of the medication does Hazel need in mg, and how many cc should the owner give Hazel each day?
+%(dose_selec)%	mg/kg	mg/kg
+%(weight_selec1)%	lb	lb
+%(weight_selec2)%	oz	oz
+%(concentration_selec)%	mg/cc	mg/cc
+%(dose_input)%	2	0.5
+%(weight_input1)%	34	19
+%(weight_input2)%	5.25	12.5
+%(concentration_input)%	8	3
+%(weight_ans_input)%	15.60	8.99
+%(dose_ans_input)%	31.21	4.50
+%(vol_input)%	3.90	1.50
+%(done)%	-1	-1
+Path 1	14 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12	14 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12
+%(problem_statement_hint_1)%	Please enter "%(problem_statement)%" in the highlighted field.	Please enter "%(problem_statement)%" in the highlighted field.
+%(dose_selec_hint_1)%	Please select " %(dose_selec)%" from the highlighted menu.	Please select " %(dose_selec)%" from the highlighted menu.
+%(weight_selec1_hint_1)%	Please select " %(weight_selec1)%" from the highlighted menu.	Please select " %(weight_selec1)%" from the highlighted menu.
+%(weight_selec2_hint_1)%	Please select " %(weight_selec2)%" from the highlighted menu.	Please select " %(weight_selec2)%" from the highlighted menu.
+%(concentration_selec_hint_1)%	Please select " %(concentration_selec)%" from the highlighted menu.	Please select " %(concentration_selec)%" from the highlighted menu.
+%(dose_input_hint_1)%	Please enter "%(dose_input)%" in the highlighted field.	Please enter "%(dose_input)%" in the highlighted field.
+%(weight_input1_hint_1)%	Please enter "%(weight_input1)%" in the highlighted field.	Please enter "%(weight_input1)%" in the highlighted field.
+%(weight_input2_hint_1)%	Please enter "%(weight_input2)%" in the highlighted field.	Please enter "%(weight_input2)%" in the highlighted field.
+%(concentration_input_hint_1)%	Please enter "%(concentration_input)%" in the highlighted field.	Please enter "%(concentration_input)%" in the highlighted field.
+%(weight_ans_input_hint_1)%	Convert to kg, you need to combine the oz with the given lbs to convert efficiently.	Convert to kg, you need to combine the oz with the given lbs to convert efficiently.
+%(weight_ans_input_hint_2)%	To convert weight to kg, first convert oz to lbs by dividing oz by 16 to get the pounds. Add this to the given pounds and divide by 2.2 to get kg.	To convert weight to kg, first convert oz to lbs by dividing oz by 16 to get the pounds. Add this to the given pounds and divide by 2.2 to get kg.
+%(weight_ans_input_hint_3)%	Please enter "%(weight_ans_input)%" in the highlighted field.	Please enter "%(weight_ans_input)%" in the highlighted field.
+%(dose_ans_input_hint_1)%	To find the dose in mg, use the weight you found earlier. Consider the units to figure out the correct method of getting the dose.	To find the dose in mg, use the weight you found earlier. Consider the units to figure out the correct method of getting the dose.
+%(dose_ans_input_hint_2)%	Multiply the weight of the pet in kg by the dose in mg/kg to get the dose in mg.	Multiply the weight of the pet in kg by the dose in mg/kg to get the dose in mg.
+%(dose_ans_input_hint_3)%	<%=ifThen(hasValue(weight_ans_input),"Please enter %(dose_ans_input)% in the highlighted field.","You are missing previous parts. Please solve those before attempting this.")%>	<%=ifThen(hasValue(weight_ans_input),"Please enter %(dose_ans_input)% in the highlighted field.","You are missing previous parts. Please solve those before attempting this.")%>
+%(vol_input_hint_1)%	To find the volume to give the animal, consider the dose you found in part 2 and the given units on the concentration.	To find the volume to give the animal, consider the dose you found in part 2 and the given units on the concentration.
+%(vol_input_hint_2)%	Divide the dose in mg by the concentration in mg/cc to get the volume in cc.	Divide the dose in mg by the concentration in mg/cc to get the volume in cc.
+%(vol_input_hint_3)%	<%=ifThen(hasValue(weight_ans_input)&&hasValue(dose_ans_input),"Please enter %(vol_input)% in the highlighted field.","You are missing previous parts. Please solve those before attempting this.")%>	<%=ifThen(hasValue(weight_ans_input)&&hasValue(dose_ans_input),"Please enter %(vol_input)% in the highlighted field.","You are missing previous parts. Please solve those before attempting this.")%>
+%(done_hint_1)%	Please click the highlighted button.	Please click the highlighted button.

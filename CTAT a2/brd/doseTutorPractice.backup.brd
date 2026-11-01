@@ -1,0 +1,183 @@
+<?xml version="1.0" standalone="yes"?>
+<stateGraph firstCheckAllStates="true" caseInsensitive="true" unordered="true" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="4.0" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" confirmDone="false" startStateNodeName="%(startStateNodeName)%" tutorType="Example-tracing Tutor">
+    <startNodeMessages>
+        <message><verb>NotePropertySet</verb><properties><MessageType>StartProblem</MessageType><ProblemName>empty</ProblemName></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>problemStatement</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[A 26.4-lb dog is prescribed amoxicillin at a dose rate of 10 mg/kg. The drug concentration is 50 mg/mL. How many mL should be administered?]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>patientWeight</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[26.4]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>weightUnit</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[lbs]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>doseRate</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[10]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>doseRateUnit</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[mg/kg]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>drugConcentration</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[50]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><Selection><value>concentrationUnit</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[mg/mL]]></value></Input></properties></message>
+        <message><verb>NotePropertySet</verb><properties><MessageType>StartStateEnd</MessageType></properties></message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>empty</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>217</x>
+            <y>25</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state9</text>
+        <uniqueID>9</uniqueID>
+        <dimension>
+            <x>217</x>
+            <y>655</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state10</text>
+        <uniqueID>10</uniqueID>
+        <dimension>
+            <x>217</x>
+            <y>805</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state11</text>
+        <uniqueID>11</uniqueID>
+        <dimension>
+            <x>217</x>
+            <y>955</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>8</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>a1003303-1dc6-c27f-c5ab-7f4f90801c9d</transaction_id><Selection><value>convertedWeight</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[12.00]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[kg = pounds ÷ 2.2]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[convertedWeight]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[12.00]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>9</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>6b0b0092-1dd1-dfc9-7689-ef04a059b335</transaction_id><Selection><value>totalDose</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[120.00]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[Total dose (mg) = weight (kg) × dose rate (mg/kg)]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[totalDose]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[120.00]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>9</sourceID>
+        <destID>10</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>10</uniqueID>
+            <message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType><transaction_id>c16ceedb-9d71-e523-820d-261c1ca24534</transaction_id><Selection><value>finalVolume</value></Selection><Action><value>UpdateTextField</value></Action><Input><value><![CDATA[2.40]]></value></Input></properties></message>
+            <buggyMessage></buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage><![CDATA[Volume (mL) = total dose (mg) ÷ concentration (mg/mL)]]></hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[finalVolume]]></matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[UpdateTextField]]></matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single"><![CDATA[2.40]]></matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>10</sourceID>
+        <destID>11</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <EdgesGroups ordered="false">
+    </EdgesGroups>
+</stateGraph>

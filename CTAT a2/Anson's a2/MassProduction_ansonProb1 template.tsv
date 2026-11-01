@@ -1,0 +1,36 @@
+Problem Name	prob1.brd
+%(problem_statement)%	Fluffy the dog is prescribed prednisolone for his skin allergies. The veterinarian wants
+him to get 1mg/kg. Fluffy weighs in at 26 pounds and 7 3/4 ounces. The vet has a liquid that contains 5mg/cc in the pharmacy cabinet. How much of the steroid does Fluffy get?
+And, how much cc does the owner give Fluffy every day?
+%(dose_selec)%	mg/kg
+%(weight_selec1)%	lb
+%(weight_selec2)%	oz
+%(concentration_selec)%	mg/cc
+%(dose_input)%	1
+%(weight_input1)%	26
+%(weight_input2)%	7.75
+%(concentration_input)%	5
+%(weight_ans_input)%	12.03
+%(dose_ans_input)%	12.03
+%(vol_input)%	2.41
+%(done)%	-1
+Path 1	14 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12
+%(problem_statement_hint_1)%	Please enter "%(problem_statement)%" in the highlighted field.
+%(dose_selec_hint_1)%	Please select " %(dose_selec)%" from the highlighted menu.
+%(weight_selec1_hint_1)%	Please select " %(weight_selec1)%" from the highlighted menu.
+%(weight_selec2_hint_1)%	Please select " %(weight_selec2)%" from the highlighted menu.
+%(concentration_selec_hint_1)%	Please select " %(concentration_selec)%" from the highlighted menu.
+%(dose_input_hint_1)%	Please enter "%(dose_input)%" in the highlighted field.
+%(weight_input1_hint_1)%	Please enter "%(weight_input1)%" in the highlighted field.
+%(weight_input2_hint_1)%	Please enter "%(weight_input2)%" in the highlighted field.
+%(concentration_input_hint_1)%	Please enter "%(concentration_input)%" in the highlighted field.
+%(weight_ans_input_hint_1)%	Convert to kg, you need to combine the oz with the given lbs to convert efficiently.
+%(weight_ans_input_hint_2)%	To convert weight to kg, first convert oz to lbs by dividing oz by 16 to get the pounds. Add this to the given pounds and divide by 2.2 to get kg.
+%(weight_ans_input_hint_3)%	Please enter "%(weight_ans_input)%" in the highlighted field.
+%(dose_ans_input_hint_1)%	To find dose in mg, use the weight you found earlier. Consider the units to figure out the correct method of getting the dose.
+%(dose_ans_input_hint_2)%	Multiply the weight of the pet in kg to the dose in mg/kg to get the dose.
+%(dose_ans_input_hint_3)%	<%=ifThen(hasValue(weight_ans_input),"Please enter %(dose_ans_input)% in the highlighted field.","You are missing previous parts. Please solve those before attempting this.")%>
+%(vol_input_hint_1)%	To find the volume to give the animal, consider the dose you found in part 2 and the given units on the concentration. 
+%(vol_input_hint_2)%	Multiply the dose with the concentration to get the volume
+%(vol_input_hint_3)%	<%=ifThen(hasValue(weight_ans_input)&&hasValue(dose_ans_input),"Please enter %(vol_input)% in the highlighted field.","You are missing previous parts. Please solve those before attempting this.")%>
+%(done_hint_1)%	Please click the highlighted button.

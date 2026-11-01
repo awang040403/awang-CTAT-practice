@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Veterinary Dose Calculation Tutor</title>
+  <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/lab/CTAT.css">
+  <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/lab/html-editor-default.css">
+  <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/lab/guppy/guppy-default-osk.min.css">
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/guppy/guppy.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/guppy/guppy_osk.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/jquery.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/nools.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/ctat.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/ctatloader.js"></script>
+
+  <style>
+    html, body { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;
+      font-size:14px; background:#f4f6f8; color:#222; }
+
+    #ivv2h { max-width:900px; margin:0 auto; padding:12px 16px; }
+
+    h1 { font-size:18px; margin:0 0 8px 0; }
+    h2 { font-size:15px; margin:14px 0 6px 0; color:#1a4d80;
+      border-bottom:1px solid #c8d0d8; padding-bottom:3px; }
+
+    .problemBox { background:#fffbe6; border:1px solid #e0c97f; border-radius:4px;
+      padding:8px 10px; margin-bottom:10px; min-height:48px; }
+
+    table.given { border-collapse:collapse; width:100%; margin-bottom:4px; line-height:1.1; }
+    table.given tr { line-height:1.1; }
+    table.given td { padding:0 6px; vertical-align:middle; line-height:1.1; }
+    table.given td.label { width:55%; text-align:right; color:#333; }
+    table.given td.value { width:45%; white-space:nowrap; }
+
+    .stepRow { margin:6px 0; padding:6px 8px; background:#fff;
+      border:1px solid #d5dde5; border-radius:4px; }
+    .stepRow .stepLabel { display:block; margin-bottom:6px; font-weight:bold; color:#1a4d80; }
+
+    .formulaLine { display:block; margin:4px 0; }
+    .formulaLine .flLabel { display:inline-block; min-width:80px;
+      font-size:13px; color:#555; }
+
+    .CTATFormulaInput { display:inline-block !important; width:260px;
+      padding:3px 6px !important; margin:0 !important;
+      border:2px solid #1a4d80; border-radius:4px; background:#fff;
+      font-family:"Courier New", monospace; font-size:14px; vertical-align:middle; }
+
+    .CTATTextInput { display:inline-block !important; width:110px;
+      padding:3px 6px !important; margin:0 !important; border:2px solid #1a4d80;
+      border-radius:4px; background:#fff; font-size:14px; vertical-align:middle; }
+    .CTATTextInput:focus, .CTATFormulaInput:focus { outline:none;
+      border-color:#e08a00; box-shadow:0 0 4px rgba(224,138,0,0.5); }
+
+    .precisionNote { font-size:12px; color:#8a6d3b; background:#fcf8e3;
+      border:1px solid #faebcc; border-radius:3px; padding:4px 6px; margin-top:6px; }
+
+    .units { font-size:12px; color:#555; margin-left:4px; }
+
+    #problemStatement { min-height:40px; padding:4px 6px; background:transparent;
+      border:none; font-size:14px; line-height:1.4; display:block; }
+
+    .CTATTextField { display:inline-block !important; padding:0 4px !important;
+      margin:0 !important; font-weight:bold; color:#1a4d80; background:#eef4fa;
+      border-radius:3px; min-width:20px; line-height:1.1 !important; vertical-align:middle; }
+
+    /* ---- HintWidgetRow: full-width row outside the content div ---- */
+    body > .HintWidgetRow,
+    body > section.HintWidgetRow {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
+      width: 100% !important;
+      max-width: 900px !important;
+      box-sizing: border-box !important;
+      margin: 0 auto !important;
+      padding: 8px 16px 16px 16px !important;
+      gap: 12px !important;
+    }
+
+    .HintWidgetButtons {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 8px !important;
+      flex: 0 0 auto !important;
+    }
+
+    .CTATDoneButton {
+      display: inline-block !important;
+      padding: 6px 18px !important;
+      background: #1a4d80 !important;
+      color: #fff !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      font-weight: bold !important;
+      width: auto !important;
+      height: auto !important;
+    }
+    .CTATDoneButton:hover { background: #265f9a !important; }
+
+    .CTATHintButton {
+      display: inline-block !important;
+      width: 22px !important;
+      height: 22px !important;
+      line-height: 22px !important;
+      text-align: center !important;
+      padding: 0 !important;
+      background: #e08a00 !important;
+      color: #fff !important;
+      border-radius: 50% !important;
+      cursor: pointer !important;
+      font-weight: bold !important;
+      font-size: 14px !important;
+      vertical-align: middle !important;
+      flex: 0 0 auto !important;
+    }
+    .CTATHintButton:hover { background: #c77800 !important; }
+
+    .CTATHintWindow {
+      display: block !important;
+      flex: 1 1 auto !important;
+      width: auto !important;
+      min-width: 0 !important;
+      min-height: 80px !important;
+      padding: 8px !important;
+      background: #f9fbfd !important;
+      border: 1px solid #d5dde5 !important;
+      border-radius: 4px !important;
+      font-size: 13px !important;
+      line-height: 1.4 !important;
+      box-sizing: border-box !important;
+      overflow: visible !important;
+    }
+
+    .CTATSkillWindow {
+      display: block !important;
+      flex: 0 0 auto !important;
+      min-width: 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="ivv2h" class="flexcolumn">
+
+  <h1>Veterinary Dose Calculation</h1>
+
+  <div class="problemBox">
+    <b>Problem:</b>
+    <div id="problemStatement" class="CTATTextField"></div>
+  </div>
+
+  <h2>Given Information</h2>
+  <table class="given">
+    <tr>
+      <td class="label">Patient weight:</td>
+      <td class="value">
+        <div id="patientWeight" class="CTATTextField"></div>
+        <div id="weightUnit" class="CTATTextField"></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">Prescribed dose rate:</td>
+      <td class="value">
+        <div id="doseRate" class="CTATTextField"></div>
+        <div id="doseRateUnit" class="CTATTextField"></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">Drug concentration:</td>
+      <td class="value">
+        <div id="drugConcentration" class="CTATTextField"></div>
+        <div id="concentrationUnit" class="CTATTextField"></div>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Step 1 &mdash; Convert weight to kilograms</h2>
+  <div class="stepRow">
+    <span class="stepLabel">Write the formula, then the result.</span>
+    <span class="formulaLine">
+      <span class="flLabel">Formula:</span>
+      <span>weight_kg =</span>
+      <div id="step1Formula" class="CTATFormulaInput"></div>
+    </span>
+    <span class="formulaLine">
+      <span class="flLabel">Result:</span>
+      <div id="convertedWeight" class="CTATTextInput"></div>
+      <span class="units">kg</span>
+    </span>
+  </div>
+
+  <h2>Step 2 &mdash; Calculate the total dose</h2>
+  <div class="stepRow">
+    <span class="stepLabel">Write the formula, then the result.</span>
+    <span class="formulaLine">
+      <span class="flLabel">Formula:</span>
+      <span>total_dose =</span>
+      <div id="step2Formula" class="CTATFormulaInput"></div>
+    </span>
+    <span class="formulaLine">
+      <span class="flLabel">Result:</span>
+      <div id="totalDose" class="CTATTextInput"></div>
+      <span class="units">mg</span>
+    </span>
+  </div>
+
+  <h2>Step 3 &mdash; Calculate the volume to administer</h2>
+  <div class="stepRow">
+    <span class="stepLabel">Write the formula, then the result.</span>
+    <span class="formulaLine">
+      <span class="flLabel">Formula:</span>
+      <span>volume =</span>
+      <div id="step3Formula" class="CTATFormulaInput"></div>
+    </span>
+    <span class="formulaLine">
+      <span class="flLabel">Result:</span>
+      <div id="finalVolume" class="CTATTextInput"></div>
+      <span class="units">mL</span>
+    </span>
+  </div>
+
+  <div class="precisionNote">
+    <b>Precision:</b> Enter all results rounded to <b>2 decimal places</b>
+    (e.g., 5.45, not 5.4545). Intermediate values must be rounded to
+    2 decimals before being used in the next step.
+  </div>
+
+</div>
+
+<!-- HintWidgetRow sits outside the content div, exactly as in the reference -->
+<section id="i1epj" class="HintWidgetRow">
+  <div id="iyvo5" class="HintWidgetButtons">
+    <div id="it6yj" class="CTATHintButton"></div>
+    <div id="done" class="CTATDoneButton"></div>
+  </div>
+  <div id="iwqxu" class="CTATHintWindow"></div>
+  <div id="iezhe" class="CTATSkillWindow"></div>
+</section>
+
+</body>
+</html>

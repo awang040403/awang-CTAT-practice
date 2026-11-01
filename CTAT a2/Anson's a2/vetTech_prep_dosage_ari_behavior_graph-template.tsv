@@ -1,0 +1,107 @@
+Problem Name	behavior_graph.brd	problem2.brd
+%(problem_statement)%	"The veterinarian wants to use Telazol® (tiletamine and zolazepam) to restrain a ferret for
+a short diagnostic procedure. The dosage is 22mg/kg IM. This ferret weighs.1lb, 10oz.
+What is the dose in milligrams and milliliters of the product shown to be used on this
+ferret? The Telazol solution has concentration 100mg/mL."	"Skinny Cat is skinny; she only weighs 6 pounds 6 ounces. She has excess stomach acid and needs to be treated with famotidine,the active ingredient in PepsidAC. The bottle says 200mg per 20ml (see the photograph). The correct dosage is 0.5mg per kg of body weight. How much famotidine should Skinny Cat receive? How much of the liquid will you draw up in a syringe?"
+%(irvsbm)%	How would you like to go from lbs and oz to kg? There is no right or wrong answer. Pick which one you want to convert to as an intermediate step.	
+%(radio1)%	oz	
+%(radio2)%	lbs	
+%(head1)%	amount	
+%(head2)%	quantity	
+%(head3)%	unit	
+%(amt1)%	weight of the animal	
+%(unit1)%	lbs and oz	
+%(amt2)%	weight of the animal	
+%(amt3)%	weight of the animal	
+%(unit3)%	kg	
+%(amt4)%	dosage for the procedure	
+%(unit4)%	mg/kg	
+%(amt5)%	concentration of the product	
+%(unit5)%	mg/mL	
+%(amt6)%	dose of product to be given to the animal	
+%(ikipk)%	dose of product to be drawn into syringe from the container	
+%(unit7)%	mL	
+%(unit6)%	mg	
+%(chosenUnit)%	chosen conversion step for weight of the animal	
+%(formula3)%	enter the formula to calculate the dose when you are given the dose for the animal in mg and the concentration of the product to be used	
+%(formula2)%	enter the formula to calculate the dose when you are given the weight of the animal in the correct units and the dosage for the procedure	
+%(idnn7)%		
+%(qty4)%		
+%(radios_P1)%	radio1: oz	
+%(chosenValue_P1)%	oz	
+%(unit2_P1)%	chosenValue	
+%(formula1_P1)%	enter the formula to convert the animal's weight from oz to kg	
+%(icn8u_P1)%	weight/35.274	
+%(qty2_P1)%	26	
+%(qty3_P1)%	26/35.274	
+%(doseMassFormula)%	dose = dosage * weight	
+%(qty6)%	22 * 0.737	
+%(doseVolumeFormula)%	dose (mL) = dose (mg)/concentration of product (mg/mL)	
+%(qty7)%	16.214/100	
+%(qty2_P2)%	11	
+%(icn8u_P2)%	weight*35.274	
+%(radios_P2)%	radio2: lbs	
+%(chosenValue_P2)%	lbs	
+%(unit2_P2)%	chosenValue	
+%(formula1_P2)%	enter the formula to convert the animal's weight from lbs to kg	
+%(icn8u_P3)%	weight/2.205	
+%(qty2_P3)%	1.625	
+%(qty3_P2)%	1.625/2.205	
+%(qty2_P4)%	11	
+%(icn8u_P4)%	weight*2.205	
+Path 1	1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 -> 15 -> 16 -> 17 -> 18 -> 19 -> 20 -> 21 -> 23 -> 34 -> 35 -> 42 -> 52 -> 53 -> 25 -> 26 -> 27 -> 32 -> 37 -> 45 -> 49 -> 58 -> 59 -> 60 -> 61	
+%(problem_image_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(problem_statement_hint_1)%	Please enter "template for problem statement" in the highlighted field.	
+%(irvsbm_hint_1)%	Please enter "How would you like to go from lbs and oz to kg?" in the highlighted field.	
+%(head1_hint_1)%	Please enter "%(head1)%" in the highlighted field.	
+%(head2_hint_1)%	Please enter "%(head2)%" in the highlighted field.	
+%(head3_hint_1)%	Please enter "%(head3)%" in the highlighted field.	
+%(amt1_hint_1)%	Please enter "%(amt1)%" in the highlighted field.	
+%(unit1_hint_1)%	Please enter "%(unit1)%" in the highlighted field.	
+%(amt2_hint_1)%	Please enter "%(amt2)%" in the highlighted field.	
+%(amt3_hint_1)%	Please enter "%(amt3)%" in the highlighted field.	
+%(unit3_hint_1)%	Please enter "%(unit3)%" in the highlighted field.	
+%(amt4_hint_1)%	Please enter "%(amt4)%" in the highlighted field.	
+%(unit4_hint_1)%	Please enter "%(unit4)%" in the highlighted field.	
+%(amt5_hint_1)%	Please enter "%(amt5)%" in the highlighted field.	
+%(unit5_hint_1)%	Please enter "%(unit5)%" in the highlighted field.	
+%(amt6_hint_1)%	Please enter "dose of product to be given for this procedure" in the highlighted field.	
+%(ikipk_hint_1)%	Please enter "dose of product to be given for this procedure" in the highlighted field.	
+%(unit7_hint_1)%	Please enter "%(unit7)%" in the highlighted field.	
+%(unit6_hint_1)%	Please enter "%(unit6)%" in the highlighted field.	
+%(chosenUnit_hint_1)%	Please enter "chosen conversion step" in the highlighted field.	
+%(formula3_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(formula2_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(idnn7_hint_1)%	"Please enter "1lb, 10oz" in the highlighted field."	
+%(qty4_hint_1)%	Please enter "22" in the highlighted field.	
+%(qty5_hint_1)%	Please enter "100" in the highlighted field.	
+%(radios_P1_hint_1)%	Please click the highlighted button.	
+%(chosenValue_P1_hint_1)%	Please enter "%(chosenValue_P1)%" in the highlighted field.	
+%(unit2_P1_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(formula1_P1_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(icn8u_P1_hint_1)%	Please enter "%(icn8u_P1)%" in the highlighted field.	
+%(qty2_P1_hint_1)%	Please enter "%(qty2_P1)%" in the highlighted field.	
+%(qty3_P1_hint_1)%	Please enter "%(qty3_P1)%" in the highlighted field.	
+%(doseMassFormula_hint_1)%	Please enter "%(doseMassFormula)%" in the highlighted field.	
+%(qty6_hint_1)%	Please enter "%(qty6)%" in the highlighted field.	
+%(doseVolumeFormula_hint_1)%	Please enter "%(doseVolumeFormula)%" in the highlighted field.	
+%(qty7_hint_1)%	Please enter "%(qty7)%" in the highlighted field.	
+Path 2	46	
+%(qty2_P2_hint_1)%	Please enter "%(qty2_P2)%" in the highlighted field.	
+Path 3	38	
+%(icn8u_P2_hint_1)%	Please enter "%(icn8u_P2)%" in the highlighted field.	
+Path 4	28 -> 29 -> 30 -> 36 -> 43 -> 47 -> 50	
+%(radios_P2_hint_1)%	Please click the highlighted button.	
+%(chosenValue_P2_hint_1)%	Please enter "%(chosenValue_P2)%" in the highlighted field.	
+%(unit2_P2_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(formula1_P2_hint_1)%	Please answer "No_Input" on the highlighted element.	
+%(icn8u_P3_hint_1)%	Please enter "weight/35.274" in the highlighted field.	
+%(qty2_P3_hint_1)%	Please enter "%(qty2_P3)%" in the highlighted field.	
+%(qty3_P2_hint_1)%	Please enter "26/35.274" in the highlighted field.	
+Path 5	48	
+%(qty2_P4_hint_1)%	Please enter "%(qty2_P4)%" in the highlighted field.	
+Path 6	44	
+%(icn8u_P4_hint_1)%	Please enter "%(icn8u_P4)%" in the highlighted field.	
+%(qty5)%	qty5	
+%(problem_number)%	1	
+%(problem_image)%	Assets/%(problem_number).png	

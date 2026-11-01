@@ -1,0 +1,15 @@
+Problem Name	Problem1	Problem2	Problem3
+%(problem_Statement)%	"The veterinarian wants to use Telazol?(tiletamine and zolazepam) in the figure below to restrain a ferret for a short diagnostic procedure. The dosage is 22mg/kg IM. This ferret weighs.1lb,10oz. What is the dose in milligrams and milliliters of the product shown in the figure to be used on this ferret?"	"Zeke is a fairly chubby cat who weighs 11 pounds 5 ounces. He needs to be treated with Revolution, a flea treatment with the active ingredient selamectin. The dosage for a cat is 6mg of selamectin per kilogram. You have a vial of Revolution; the label says 2ml, 240 mg Selamectin. How much selamectin should Zeke get? How much of the liquid will you draw up in a syringe?"	"Skinny Cat is skinny; she only weighs 6 pounds 6 ounces. She has excess stomach acid and needs to be treated with famotidine,the active ingredient in PepsidAC. The bottle says 200mg per 20ml (see the photograph). The correct dosage is 0.5mg per kg of body weight. How much famotidine should Skinny Cat receive? How much of the liquid will you draw up in a syringe?"
+%(animal_Name)%	Ferret	Cat	Cat
+%(startStateNodeName)%			
+%(ounce_value)%	10	5	6
+%(pound_value)%	1	11	6
+%(weight_lb)%	1.625	11.3125	6.375
+%(weight_kg)%	0.73	5.09	2.87
+%(rec_dose_mg)%	22	6	0.5
+%(rec_dose_kg)%	1	1	1
+%(bottle_dose_ml)%	1	2	20
+%(bottle_dose_mg)%	100	240	200
+%(dosage_mg_per_ml)%	100	120	0.5
+%(final_dose_ml)%	16.06	30.54	1.44
+%(final_dose_mg)%	0.16	0.25	0.14

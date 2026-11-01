@@ -1,0 +1,21 @@
+Problem Name	ferret.brd	cat.brd	rabbit.brd
+%(startStateNodeName)%			
+%(problem_image)%	problem1	problem2	problem3
+%(problem_statement)%	"The veterinarian wants to use Telazol® (tiletamine and zolazepam) to restrain a ferret for a short diagnostic procedure. The dosage is 22mg/kg IM. This ferret weighs.1lb, 10oz. What is the dose in milligrams and milliliters of the product shown to be used on this ferret? The Telazol solution has concentration 100mg/mL."	"Skinny Cat is skinny; she only weighs 6 pounds 6 ounces. She has excess stomach acid and needs to be treated with famotidine,the active ingredient in PepsidAC. The bottle says 200mg per 20ml (see the photograph). The correct dosage is 0.5mg per kg of body weight. How much famotidine should Skinny Cat receive? How much of the liquid will you draw up in a syringe?"	"A small Dutch rabbit named Clover has come in for a minor wound repair and needs sedation. The veterinarian orders dexmedetomidine at a dosage of 5 mg/kg IM. Clover weighs 3 lb, 8 oz. The dexmedetomidine solution on hand has a concentration of 10 mg/mL. What is the dose in milligrams and milliliters to be administered to Clover?"
+%(weight_mixed)%	"1 lb, 10 oz"	"6 lb, 6 oz"	"3 lb, 8 oz"
+%(mixed_lbs_part)%	1	6	3
+%(mixed_oz_part)%	10	6	8
+%(dosage)%	22	0.5	5
+%(concentration)%	100	200/20	10
+%(doseMassFormula_P1)%			
+%(qty6_P1)%			
+%(doseVolumeFormula_P1)%			
+%(qty7_P1)%			
+%(chosenToKgFormula_P3)%			
+%(qty3_P2)%			
+%(doseMassFormula_P2)%			
+%(qty6_P2)%			
+%(doseVolumeFormula_P2)%			
+%(qty7_P2)%			
+%(mixed_to_chosen_oz)%	26	102	56
+%(mixed_to_chosen_lbs)%	1.625	algEval((%(mixed_lbs_part)%) + (%(mixed_oz_part)%/16))	algEval((%(mixed_lbs_part)%) + (%(mixed_oz_part)%/16))
